@@ -41,16 +41,13 @@ uploading and booting a rom:
 ## linux instructions
 please run as root
 
+install `libftdi` from your package manager of choice (including headers). eg for ubuntu:
 
-required libs:
-libftdi 0.20
-http://www.intra2net.com/en/developer/libftdi/
-
-
-compilation:
-
+```bash
+sudo apt-get install libftdi1 libftdi1-dev
 ```
-chmod +x make.sh
+
+```bash
 ./make.sh
 ```
 
@@ -58,11 +55,11 @@ chmod +x make.sh
 
 upload rom:
 
-```
-sudo ./loader64 -vwf OS64.v64
+```bash
+sudo ./loader64 -vwf somerom.v64
 ```
 
 boot rom:
-```
+```bash
 sudo ./loader64 -vp
 ```
